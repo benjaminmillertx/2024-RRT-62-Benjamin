@@ -71,3 +71,30 @@ System.outprintln(" Value of q after integer division: " + q);
 System.out.println("Value of q after casting y to double:" + q);
   }
 }
+//Write a program that declares a named constant and uses it in a calculation. Print the result.
+
+public class Main{ 
+   public static void
+main(String [] args) {
+   final double PI= 3.14159;
+   int radius = PI * radius * radius;
+
+System.out.println("Area of the circle with radius" + 
+                  radius +" is: " area ) ;
+
+   } 
+}
+//
+
+//Write a program where you create three variables that represent products at a cafe. The products could be beverages like coffee, cappuccino, espresso, green tea, etc. Assign prices to each product. Create two more variables called subtotal and totalSale and complete an “order” for three items of the first product, four items of the second product, and two items of the third product. Add them all together to calculate the subtotal. Create a constant called SALES_TAX and add sales tax to the subtotal to obtain the totalSale amount. Be sure to format the results to two decimal places
+//
+
+doublecoffee= 2.50;
+doublecappucino= 3.50; 
+doubleespresso = 4.50:
+
+double subtotal= (Coffee * 3) + (cappuccino * 4) +(espresso * 2);
+double salesTax =00.9;
+
+doublesalesTaxAmount=subtotatal + SalesTaxAmount;
+doubletotalAmount= subtotal + salesTaxAmount;
