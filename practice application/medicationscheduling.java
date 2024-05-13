@@ -59,7 +59,7 @@ MedicationScheduler scheduler = new MedicationScheduler();
 
 scheduler.addMedication("Medicine A",8,0);
 //Example time: 8:00  AM
-scheduler.addMedication("Medicinr B",12,30);
+scheduler.addMedication("Medicine B",12,30);
 //Example time:12:30 PM
 
 //Schedule medications
