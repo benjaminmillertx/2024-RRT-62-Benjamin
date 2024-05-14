@@ -1,1 +1,28 @@
 Write a Java program to get the value of a specified key in a map.
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a map
+        Map<String, Integer> map = new HashMap<>();
+        
+        // Add some key-value pairs
+        map.put("apple", 10);
+        map.put("banana", 20);
+        map.put("orange", 30);
+        
+        // Specify the key you want to get the value for
+        String key = "banana";
+        
+        // Get the value for the specified key
+        Integer value = map.get(key);
+        
+        // Print the value
+        if (value != null) {
+            System.out.println("The value for key '" + key + "' is: " + value);
+        } else {
+            System.out.println("Key '" + key + "' not found in the map.");
+        }
+    }
+}
