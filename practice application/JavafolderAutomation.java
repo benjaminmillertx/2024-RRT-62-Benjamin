@@ -25,8 +25,16 @@ return;
 if(!destinationDir.exists()) {
 destinationDir.mkdirs();
 }
-//get 
-//
+//get a list of .java file to the destination folder
+if(javaFiles != null)
+{
+  for(File javaFile : javaFiles) {
+    try{
+      Path
+sourcePath=javaFile.toPath();
+Path destinationPath=new File(destinationDir,java.File.getName()).toPath();
+
+Files
 
 
   
