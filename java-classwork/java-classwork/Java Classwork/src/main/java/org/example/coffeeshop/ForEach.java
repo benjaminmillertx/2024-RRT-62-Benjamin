@@ -25,6 +25,8 @@ names.stream().filter(name -> namestartsWith("E).collect.(Collectors.toList();
 for (string name: names) {
 system.out.println(name);
   }
+  long count = names.stream().filter.(name -> name.starts.with("J")).count();
+  System.out.println("Names in list starting with J : + count );
 }
 
 
