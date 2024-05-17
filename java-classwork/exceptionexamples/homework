@@ -1,0 +1,31 @@
+public class ExceptionExamples {
+public void run() throws  ArrayIndexOutOfbounds, InputMismatchException{
+
+ //any code after the exceptional will not get run
+System.out.println("After Error - no error occured")
+
+throw new Exceptions ("This message should describe what went wrong")
+}catch (InputMismatchExceptions inc){
+try {
+  //do some other code
+}catch (exception ex1) {
+
+}
+  system.out.println("THe user entered bed data");
+} catch (ArrayIndexOutOfBoundsException aiobe) {
+  system.out.println("The user entered an invalid array postion" + aiobe.getMessage());
+}catch (exception e){
+  system.out.println("Caught the acception e with the message": " + e.getMessage());
+  e.PrintStackTrace();
+  finally{
+// this is code will execute no matter what
+  System.out.println("Inside the finall block");
+
+
+    public static void main (Strings[] args) {
+    ExceptionExamples  00 = New ExceptionExamples()
+
+   scanner scanner = new Scanner(System in);
+   scanner=nextline
+
+  
