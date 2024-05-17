@@ -16,6 +16,8 @@ names.forEach(name -> {
 
 System.out.println("-----------------------------------")
 
+name= name stream().filter(name  ! name.stream().filter(name -> ! namestartswith('E
+
 for(String name: names)
 system.out.println("------------------------------------")
 names.stream().filter(name -> namestartsWith("E).collect.(Collectors.toList();
