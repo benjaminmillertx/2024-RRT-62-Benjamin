@@ -43,5 +43,6 @@ public class CoffeeShop {
             Product product = products.get(pos);
             System.out.println((pos+1) + ") " + product.getName() + "\t" + product.getPrice() );
         }
+        products.ForEach. 
     }
 }
