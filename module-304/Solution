@@ -1,0 +1,14 @@
+SELECT 
+    l.name, 
+    FORMAT(MIN(o.amount), 2) AS min_offer, 
+    FORMAT(AVG(o.amount), 2) AS avg_offer, 
+    FORMAT(MAX(o.amount), 2) AS max_offer, 
+    COUNT(o.amount) AS offers
+FROM 
+    lots l
+LEFT JOIN 
+    offers o ON l.id = o.lot_id
+GROUP BY 
+    l.id, l.name
+ORDER BY 
+    offers DESC;
