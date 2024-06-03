@@ -30,3 +30,15 @@ Query 5:
 SELECT column1, AVG(column2)
 FROM table_name
 GROUP BY column1;
+
+code
+-- XC1
+select c.name
+from course c
+where c.id not in (select distinct courseId from facultycourse)
+order by c.name asc;
+
+
+
+
+
