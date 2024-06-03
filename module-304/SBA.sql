@@ -17,3 +17,19 @@ from product p, order_details od
 where p.id = od.product_id
 group by p.id;
 
+SELECT
+    p.product_name,
+    MAX(od.buy_price) AS max_offer,
+    MIN(od.buy_price) AS min_buy_price,
+    AVG(od.buy_price) AS avg_buy_price,
+    SUM(od.buy_price) AS total_spent
+FROM
+    product p
+JOIN
+    order_details od ON p.id = od.product_id
+GROUP BY
+    p.id
+ORDER BY
+    total_spent DESC;
+
+
