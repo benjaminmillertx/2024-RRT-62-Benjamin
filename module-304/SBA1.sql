@@ -76,6 +76,12 @@ where s.id = sc.studentId
 group by s.id
 having avg_progress < 50;
 
+select s.firstname, s.lastname, round(avg(progress), 1) as avg_progress
+from student s, studentcourse sc
+where s.id = sc.studentId
+group by s.id
+having avg_progress < 50;
+
 
 
 
