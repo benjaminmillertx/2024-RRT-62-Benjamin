@@ -48,3 +48,9 @@ where c.id not in (select distinct courseId from facultycourse)
 and c.id = sc.courseId
 group by c.id
 order by count(sc.studentId) desc, c.name asc;
+
+-- 3D
+select count(distinct sc.studentId) as Students, year(startDate) as Year
+from studentcourse sc
+group by year(sc.startDate)
+order by year asc, Students desc;
