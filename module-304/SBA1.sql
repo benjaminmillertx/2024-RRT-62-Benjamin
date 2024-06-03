@@ -60,6 +60,22 @@ where s.id = sc.studentId
 group by s.id
 order by course_count desc, firstname asc, lastname asc;
 
+-- 3F
+select s.firstname, s.lastname, count(sc.courseId) as course_count
+from student s, studentcourse sc, course c
+where s.id = sc.studentId
+    and sc.courseId = c.id
+    and c.deptId = s.majorId
+group by s.id
+order by course_count desc, firstname asc, lastname asc;
+
+-- 3G -- may need to use round instead
+select s.firstname, s.lastname, format(avg(progress),1) as avg_progress
+from student s, studentcourse sc
+where s.id = sc.studentId
+group by s.id
+having avg_progress < 50;
+
 
 
 
