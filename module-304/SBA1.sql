@@ -82,6 +82,16 @@ where s.id = sc.studentId
 group by s.id
 having avg_progress < 50;
 
+-- 312
+select format(avg(progress),1) as avg_progress, c.name
+from course c, studentcourse sc
+where c.id = sc.courseId
+group by c.id
+order by avg_progress desc, c.name asc
+limit 1;
+
+
+
 
 
 
