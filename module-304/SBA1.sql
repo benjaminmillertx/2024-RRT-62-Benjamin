@@ -38,6 +38,13 @@ from course c
 where c.id not in (select distinct courseId from facultycourse)
 order by c.name asc;
 
+-- 3D
+select count(distinct sc.studentId) as Students, year(startDate) as Year
+from studentcourse sc
+group by year(sc.startDate)
+order by year asc, Students desc;
+
+
 
 
 
