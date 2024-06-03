@@ -33,3 +33,18 @@ ORDER BY
     total_spent DESC;
 
 
+sql
+Copy code
+-- XC1
+select c.name
+from course c
+where c.id not in (select distinct courseId from facultycourse)
+order by c.name asc;
+
+-- XC2
+select c.name, count(sc.studentId)
+from course c, studentcourse sc
+where c.id not in (select distinct courseId from facultycourse)
+and c.id = sc.courseId
+group by c.id
+order by count(sc.studentId) desc, c.name asc;
