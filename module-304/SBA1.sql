@@ -44,6 +44,13 @@ from studentcourse sc
 group by year(sc.startDate)
 order by year asc, Students desc;
 
+-- 3E
+select startDate, count(distinct sc.studentId) as students
+from studentcourse sc
+where month(startDate) = 8
+group by startDate
+order by startDate asc, students asc;
+
 
 
 
