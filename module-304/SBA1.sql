@@ -90,7 +90,13 @@ group by c.id
 order by avg_progress desc, c.name asc
 limit 1;
 
-
+-- 343
+select firstname, lastname, avg(progress) as avg_progress
+from faculty f, facultycourse fc, studentcourse sc
+where f.id = fc.facultyId
+and fc.courseId = sc.courseId
+group by f.id
+order by avg_progress desc;
 
 
 
