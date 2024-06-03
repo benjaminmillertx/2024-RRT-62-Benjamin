@@ -98,6 +98,28 @@ and fc.courseId = sc.courseId
 group by f.id
 order by avg_progress desc;
 
+-- 31
+select firstname, lastname, min(progress), max(progress),
+    CASE
+        WHEN min(progress) < 40 THEN 'F'
+        WHEN min(progress) < 50 THEN 'E'
+        WHEN min(progress) < 60 THEN 'D'
+        WHEN min(progress) < 70 THEN 'C'
+        WHEN min(progress) < 80 THEN 'B'
+        ELSE 'A'
+    END as min_grade,
+    CASE
+        WHEN max(progress) < 40 THEN 'F'
+        WHEN max(progress) < 50 THEN 'E'
+        WHEN max(progress) < 60 THEN 'D'
+        WHEN max(progress) < 70 THEN 'C'
+        WHEN max(progress) < 80 THEN 'B'
+        ELSE 'A'
+    END as max_grade
+from student s, studentcourse sc
+where s.id = sc.studentId
+group by s.id;
+
 
 
 
