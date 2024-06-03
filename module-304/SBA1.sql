@@ -51,6 +51,15 @@ where month(startDate) = 8
 group by startDate
 order by startDate asc, students asc;
 
+-- 3F
+select s.firstname, s.lastname, count(sc.courseId) as course_count
+from student s, studentcourse sc, course c
+where s.id = sc.studentId
+    and sc.courseId = c.id
+    and c.deptId = s.majorId
+group by s.id
+order by course_count desc, firstname asc, lastname asc;
+
 
 
 
