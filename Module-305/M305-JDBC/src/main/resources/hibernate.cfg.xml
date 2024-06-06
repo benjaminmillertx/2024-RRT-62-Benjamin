@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- these two lines just tell what hibernate does with mysql database/ -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+            
+        <!-- This is database information -->
+        <property name="jdbc:mysql://192.168.2.100:3306/classic_models">
+        <property name="connection.username">root</property>
+        <property name="connection.password">password</property>
+
+        <!-- connection pool -->
+        <property name="connection.pool_size">3</property>
+        <property name="current_session_context_class">thread</property>
+
+        <!-- these show what hibernate is running turn them off and on -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+
+        <!-- this is validation for hibernate -->
+        <property name="hbm2ddl.auto">validate</property>
+        <mapping class="org.example.database.entity.Employee"/>
+    </session-factory>
+</hibernate-configuration>
