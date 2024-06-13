@@ -1,0 +1,75 @@
+.skateboard-shop {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+}
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+}
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.hero button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #ff6600;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+.benefit {
+    text-align: center;
+    width: 22%;
+}
+.benefit img {
+    width: 80px;
+    height: 80px;
+}
+.benefit h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+}
+.testimonials p {
+    font-size: 18px;
+    font-style: italic;
+}
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background: #000;
+    color: #fff;
+}
+.ct
