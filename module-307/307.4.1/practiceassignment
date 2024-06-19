@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Sarah Jefferson</title>
+    <title>Resume - Benjamin Hunter Miller</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -153,14 +153,14 @@
                 <img src="photo.jpg" alt="Sarah Jefferson">
             </div>
             <div class="info">
-                <h1>SARAH JEFFERSON</h1>
-                <h2>Designer</h2>
+                <h1>Benjamin Hunter Miller</h1>
+                <h2>Software Engineer</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <ul>
-                    <li><strong>Address:</strong> San Francisco, CA 94102, US</li>
+                    <li><strong>Address:</strong> 175 cr 4188, US</li>
                     <li><strong>Phone:</strong> 123-456-7890</li>
-                    <li><strong>Email:</strong> sarah.jefferson@email.com</li>
-                    <li><strong>Website:</strong> <a href="https://www.website.com">www.website.com</a></li>
+                    <li><strong>Email:</strong> benjaminmillerdev@gmail.com</li>
+                    <li><strong>Website:</strong> <a href="https://www.website.com">https://www.linkedin.com/in/benjamin-miller-7b64742a5?trk=contact-info</a></li>
                 </ul>
             </div>
         </div>
@@ -169,31 +169,31 @@
                 <section class="employment">
                     <h3>EMPLOYMENT</h3>
                     <div class="job">
-                        <h4>There are many variations of passages</h4>
-                        <p class="position">Director Of Department</p>
-                        <p class="date">2003 - 2007</p>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4> Upwork </h4>
+                        <p class="position">FreelanceProgrammer</p>
+                        <p class="date">2022 - 2024</p>
+                        <p> Freelance coding in Java and Python.</p>
                     </div>
                     <div class="job">
-                        <h4>Cooper Union</h4>
-                        <p class="position">Programmer</p>
-                        <p class="date">2001 - present</p>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>Hacker1</h4>
+                        <p class="position">findbugs</p>
+                        <p class="date">2023- present</p>
+                        <p>Finding critical security bugs in information system. </p>
                     </div>
                 </section>
                 <section class="education">
                     <h3>EDUCATION</h3>
                     <div class="school">
-                        <h4>Lorem Contrary to popular belief</h4>
-                        <p class="degree">Web Design</p>
-                        <p class="date">1999 - 2001</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h4>Masterschool</h4>
+                        <p class="degree">Cybersecurity</p>
+                        <p class="date">2024 - present</p>
+                        <p>I did Python and worked with diffrent security tools in Kali and SIEMs. </p>
                     </div>
                     <div class="school">
-                        <h4>Lorem Ipsum is simply dummy text</h4>
-                        <p class="degree">Graphic Design</p>
-                        <p class="date">1996 - 2000</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h4>Per Scholas</h4>
+                        <p class="degree">Software Engineering</p>
+                        <p class="date">2024 - present</p>
+                    <p>I coded architecture In Java.javascript, and SQL.</p>
                     </div>
                 </section>
             </div>
@@ -201,13 +201,13 @@
                 <section class="skills">
                     <h3>PROGRAMMING SKILLS</h3>
                     <div class="skill">
-                        <p>Wordpress</p>
+                        <p>Java</p>
                         <div class="progress">
                             <div class="progress-bar" style="width: 90%;"></div>
                         </div>
                     </div>
                     <div class="skill">
-                        <p>PHP</p>
+                        <p>Python</p>
                         <div class="progress">
                             <div class="progress-bar" style="width: 70%;"></div>
                         </div>
@@ -219,7 +219,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <p>CSS</p>
+                        <p>Javascript</p>
                         <div class="progress">
                             <div class="progress-bar" style="width: 80%;"></div>
                         </div>
@@ -235,18 +235,17 @@
                     <h3>GRAPHIC SKILLS</h3>
                     <ul>
                         <li>Adobe Photoshop</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Corel Draw</li>
-                        <li>Adobe Indesign</li>
+                        <li>Gimp</li>
+                        <li>Gimpshop</li>
                     </ul>
                 </section>
                 <section class="language-skills">
                     <h3>LANGUAGE SKILLS</h3>
                     <ul>
                         <li>English</li>
-                        <li>Spanish</li>
-                        <li>German</li>
-                        <li>French</li>
+                        <li>Spanish basics</li>
+                        <li>German basics</li>
+                        <li>Korean basics</li>
                     </ul>
                 </section>
             </div>
