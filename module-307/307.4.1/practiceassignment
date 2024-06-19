@@ -150,12 +150,12 @@
     <div class="resume">
         <div class="header">
             <div class="photo">
-                <img src="photo.jpg" alt="Sarah Jefferson">
+                <img src="https://ibb.co/48dsyPs" alt="Benjamin Miller">
             </div>
             <div class="info">
                 <h1>Benjamin Hunter Miller</h1>
                 <h2>Software Engineer</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Java and Python devolper with various expierence in diffrent frameworks including Karas,pandas and more.</p>
                 <ul>
                     <li><strong>Address:</strong> 175 cr 4188, US</li>
                     <li><strong>Phone:</strong> 123-456-7890</li>
