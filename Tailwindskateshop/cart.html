@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Benji Skate Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-blue-800 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Benji Skate Shop</h1>
+            <nav>
+                <a href="index.html" class="px-4">Home</a>
+                <a href="shop.html" class="px-4">Shop</a>
+                <a href="about.html" class="px-4">About</a>
+                <a href="contact.html" class="px-4">
+                <a href="contact.html" class="px-4">Contact</a>
+                <a href="login.html" class="px-4">Login</a>
+                <a href="cart.html" class="px-4">Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section id="cart" class="py-8">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Cart</h2>
+            <div class="bg-white p-8 rounded shadow-md">
+                <h3 class="text-lg font-bold mb-4">Review Your Order</h3>
+                <div class="mb-4">
+                    <!-- Sample product in the cart -->
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center">
+                            <img src="https://cdn.shopify.com/s/files/1/0087/1494/2775/products/dgk-street-soldier-harold-hunter-skateboard-deck-8-25-ccs-1.jpg" alt="Product Image" class="w-16 h-16 object-cover rounded">
+                            <div class="ml-4">
+                                <h4 class="font-bold">DGK Street Soldier Harold Hunter Skateboard Deck - 8.25</h4>
+                                <p class="text-gray-600">$69.95</p>
+                            </div>
+                        </div>
+                        <button class="bg-red-500 text-white px-4 py-2 rounded">Remove</button>
+                    </div>
+                    <!-- Repeat similar blocks for each product in the cart -->
+                </div>
+                <div class="border-t pt-4">
+                    <h4 class="text-lg font-bold">Total: $69.95</h4>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded shadow-md mt-8">
+                <h3 class="text-lg font-bold mb-4">Payment Information</h3>
+                <form action="payment-success.html" method="POST">
+                    <div class="mb-4">
+                        <label for="card-name" class="block text-gray-700">Cardholder Name</label>
+                        <input type="text" id="card-name" name="card-name" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="card-number" class="block text-gray-700">Card Number</label>
+                        <input type="text" id="card-number" name="card-number" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div class="mb-4 flex space-x-4">
+                        <div class="flex-1">
+                            <label for="card-expiry" class="block text-gray-700">Expiry Date</label>
+                            <input type="text" id="card-expiry" name="card-expiry" class="w-full p-2 border rounded" placeholder="MM/YY" required>
+                        </div>
+                        <div class="flex-1">
+                            <label for="card-cvc" class="block text-gray-700">CVC</label>
+                            <input type="text" id="card-cvc" name="card-cvc" class="w-full p-2 border rounded" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-blue-800 text-white py-2 px-4 rounded">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white p-4 text-center">
+        <p>&copy; 2024 Benji Skate Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
