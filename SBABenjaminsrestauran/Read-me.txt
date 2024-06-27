@@ -1,0 +1,25 @@
+# BenjaminsRestaurant
+
+## Description
+BenjaminsRestaurant is a fictional 5-star restaurant. This website provides an overview of the restaurant, its menu, and allows users to make reservations.
+
+## Technical Specifications
+- **HTML**: 10+ tags, tables, forms, web fonts, drop-down menu
+- **CSS**: Inline, internal, external styling; 5+ selectors, Flexbox, complementary colors
+- **JavaScript**: Variables, if statements, loops, functions, events
+
+## Pages
+1. **Main Page**: Introduction to the restaurant.
+2. **Menu Page**: Display of menu items in a table.
+3. **Reservations Page**: Form for booking reservations.
+
+## Hosting
+Hosted on GitHub: [www.github.com]
+
+## How to Run
+1. Download the project as a ZIP file.
+2. Extract the ZIP file.
+3. Open `index.html` in a web browser.
+
+## Contact
+For any queries, contact [benjaminmillerdev@gmail.com].
