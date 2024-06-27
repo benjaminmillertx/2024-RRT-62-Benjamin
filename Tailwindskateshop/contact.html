@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Benji Skate Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-blue-800 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Benji Skate Shop</h1>
+            <nav>
+                <a href="index.html" class="px-4">Home</a>
+                <a href="shop.html" class="px-4">Shop</a>
+                <a href="about.html" class="px-4">About</a>
+                <a href="contact.html" class="px-4">Contact</a>
+                <a href="login.html" class="px-4">Login</a>
+                <a href="cart.html" class="px-4">Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-8">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <div class="bg-white p-8 rounded shadow-md">
+                <p class="text-gray-700 mb-4">
+                    If you have any questions, comments, or concerns, please feel free to reach out to us. We'd love to hear from you!
+                </p>
+                <p class="text-gray-700 mb-4">
+                    <strong>Contact Information:</strong><br>
+                    Phone: 409-238-0485<br>
+                    Email: <a href="mailto:info@benjiskateshop.com" class="text-blue-800 underline">info@benjiskateshop.com</a>
+                </p>
+                <form action="contact-success.html" method="POST" class="mt-4">
+                    <div class="mb-4">
+                        <label for="contact-name" class="block text-gray-700">Name</label>
+                        <input type="text" id="contact-name" name="name" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contact-email" class="block text-gray-700">Email</label>
+                        <input type="email" id="contact-email" name="email" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contact-message" class="block text-gray-700">Message</label>
+                        <textarea id="contact-message" name="message" class="w-full p-2 border rounded" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-800 text-white py-2 px-4 rounded">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white p-4 text-center">
+        <p>&copy; 2024 Benji Skate Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
