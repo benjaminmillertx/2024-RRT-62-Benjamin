@@ -58,47 +58,90 @@ Visit Benjamins today and elevate your senses. Discover why discerning palates f
       <p>"The best dining experience I've ever had!" - John Doe</p>
       <p>"A must-visit for anyone in Texas." - Jane Smith</p>
     </section>
-   <script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('commentForm').addEventListener('submit', function(event) {
-        let valid = true;
-
-        // Name validation
-        const name = document.getElementById('name').value;
-        if (name.trim() === "") {
-            document.getElementById('nameError').textContent = "Name is required.";
-            valid = false;
-        } else {
-            document.getElementById('nameError').textContent = "";
+  <title>Comment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
         }
-
-        // Email validation
-        const email = document.getElementById('email').value;
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!emailPattern.test(email)) {
-            document.getElementById('emailError').textContent = "Invalid email format.";
-            valid = false;
-        } else {
-            document.getElementById('emailError').textContent = "";
+        .form-container {
+            max-width: 400px;
+            margin: auto;
         }
-
-        // Comment validation
-        const comment = document.getElementById('comment').value;
-        if (comment.trim() === "") {
-            document.getElementById('commentError').textContent = "Comment is required.";
-            valid = false;
-        } else {
-            document.getElementById('commentError').textContent = "";
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
         }
-
-        if (!valid) {
-            event.preventDefault();
+        .error {
+            color: red;
+            font-size: 0.9em;
         }
-    });
-});
-</script> 
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Comment Form</h2>
+        <form id="commentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <div class="error" id="nameError"></div>
 
-    <div id="map">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <div class="error" id="emailError"></div>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment"></textarea>
+            <div class="error" id="commentError"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('commentForm').addEventListener('submit', function(event) {
+                let valid = true;
+
+                // Name validation
+                const name = document.getElementById('name').value;
+                if (name.trim() === "") {
+                    document.getElementById('nameError').textContent = "Name is required.";
+                    valid = false;
+                } else {
+                    document.getElementById('nameError').textContent = "";
+                }
+
+                // Email validation
+                const email = document.getElementById('email').value;
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailPattern.test(email)) {
+                    document.getElementById('emailError').textContent = "Invalid email format.";
+                    valid = false;
+                } else {
+                    document.getElementById('emailError').textContent = "";
+                }
+
+                // Comment validation
+                const comment = document.getElementById('comment').value;
+                if (comment.trim() === "") {
+                    document.getElementById('commentError').textContent = "Comment is required.";
+                    valid = false;
+                } else {
+                    document.getElementById('commentError').textContent = "";
+                }
+
+                if (!valid) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html><div id="map">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.9983642115564!2d-93.73655!3d30.09299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863f787b0b0dfcb1%3A0x9990a8e41cd3d1f2!2sOrange%2C%20TX!5e0!3m2!1sen!2sus!4v1624893219410!5m2!1sen!2sus" 
           width="600" 
