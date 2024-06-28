@@ -53,6 +53,45 @@ Visit Benjamins today and elevate your senses. Discover why discerning palates f
       <p>"The best dining experience I've ever had!" - John Doe</p>
       <p>"A must-visit for anyone in Texas." - Jane Smith</p>
     </section>
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('commentForm').addEventListener('submit', function(event) {
+        let valid = true;
+
+        // Name validation
+        const name = document.getElementById('name').value;
+        if (name.trim() === "") {
+            document.getElementById('nameError').textContent = "Name is required.";
+            valid = false;
+        } else {
+            document.getElementById('nameError').textContent = "";
+        }
+
+        // Email validation
+        const email = document.getElementById('email').value;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailPattern.test(email)) {
+            document.getElementById('emailError').textContent = "Invalid email format.";
+            valid = false;
+        } else {
+            document.getElementById('emailError').textContent = "";
+        }
+
+        // Comment validation
+        const comment = document.getElementById('comment').value;
+        if (comment.trim() === "") {
+            document.getElementById('commentError').textContent = "Comment is required.";
+            valid = false;
+        } else {
+            document.getElementById('commentError').textContent = "";
+        }
+
+        if (!valid) {
+            event.preventDefault();
+        }
+    });
+});
+</script> 
 
     <div id="map">
         <iframe 
