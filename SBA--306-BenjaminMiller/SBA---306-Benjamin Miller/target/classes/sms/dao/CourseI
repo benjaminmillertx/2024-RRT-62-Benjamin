@@ -1,0 +1,13 @@
+
+  // IntelliJ API Decompiler stub source generated from a class file
+  // Implementation of methods is not available
+
+package sba.sms.dao;
+
+public interface CourseI {
+    void createCourse(sba.sms.models.Course course);
+
+    sba.sms.models.Course getCourseById(int i);
+
+    java.util.List<sba.sms.models.Course> getAllCourses();
+}
