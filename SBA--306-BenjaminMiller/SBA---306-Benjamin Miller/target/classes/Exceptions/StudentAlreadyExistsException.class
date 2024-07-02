@@ -1,0 +1,13 @@
+
+  // IntelliJ API Decompiler stub source generated from a class file
+  // Implementation of methods is not available
+
+package Exceptions;
+
+public class StudentAlreadyExistsException extends java.lang.Exception {
+    public StudentAlreadyExistsException() { /* compiled code */ }
+
+    public StudentAlreadyExistsException(java.lang.String message) { /* compiled code */ }
+
+    public StudentAlreadyExistsException(java.lang.String message, java.lang.Throwable cause) { /* compiled code */ }
+}
