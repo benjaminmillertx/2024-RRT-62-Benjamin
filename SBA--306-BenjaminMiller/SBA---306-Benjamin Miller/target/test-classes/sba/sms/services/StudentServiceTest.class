@@ -1,0 +1,41 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package sba.sms.services;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import sba.sms.models.Student;
+
+public class StudentServiceTest {
+    private StudentService studentService;
+
+    public StudentServiceTest() {
+    }
+
+    @BeforeEach
+    public void setUp() {
+        this.studentService = new StudentService();
+    }
+
+    @Test
+    public void testCreateStudent() {
+        Student student = new Student("johar@gmail.com", "Hasib Johar", "password");
+        Assertions.assertDoesNotThrow(() -> {
+            this.studentService.createStudent(student);
+        });
+        Student createdStudent = this.studentService.getStudentByEmail("johar@gmail.com");
+        Assertions.assertNotNull(createdStudent);
+        Assertions.assertEquals("johar@gmail.com", createdStudent.getEmail());
+        Assertions.assertEquals("Hasib Johar", createdStudent.getName());
+        Assertions.assertEquals("password", createdStudent.getPassword());
+    }
+
+    @AfterEach
+    public void tearDown() {
+    }
+}
