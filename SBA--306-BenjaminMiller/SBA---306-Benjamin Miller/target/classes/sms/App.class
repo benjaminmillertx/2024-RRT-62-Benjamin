@@ -1,0 +1,96 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package sba.sms;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+import java.util.logging.Logger;
+import sba.sms.models.Course;
+import sba.sms.services.CourseService;
+import sba.sms.services.StudentService;
+import sba.sms.utils.CommandLine;
+
+public class App {
+    private static final Logger log = Logger.getLogger(App.class.getName());
+    static final StudentService studentService = new StudentService();
+    static final CourseService courseService = new CourseService();
+
+    public App() {
+    }
+
+    public static void main(String[] args) {
+        CommandLine.addData();
+        Scanner input = new Scanner(System.in);
+
+        int userInput;
+        do {
+            System.out.printf("Select # from menu:%n1.Student%n2.Quit%n");
+            userInput = input.nextInt();
+            if (userInput == 1) {
+                System.out.print("Enter student email: ");
+                String email = input.next();
+                System.out.printf("Enter %s's password: ", email.substring(0, email.indexOf("@")));
+                String password = input.next();
+                if (!studentService.validateStudent(email, password)) {
+                    System.out.printf("Incorrect username or password%n");
+                } else {
+                    printStudentCourses(email);
+                    System.out.printf("select # from menu: %n1.Register %s to class: %n2.Logout%n", studentService.getStudentByEmail(email).getName());
+                    userInput = input.nextInt();
+                    if (userInput == 2) {
+                        System.exit(0);
+                    } else {
+                        List<Course> courseList = courseService.getAllCourses();
+                        System.out.printf("All courses:%n-----------------------------%n");
+                        System.out.printf("%-2s | %-20s | %s%n", "ID", "Course", "Instructor");
+                        if (courseList.isEmpty()) {
+                            System.out.printf("No courses to view%n");
+                        }
+
+                        Iterator var6 = courseList.iterator();
+
+                        while(var6.hasNext()) {
+                            Course course = (Course)var6.next();
+                            System.out.printf("%-2d | %-20s | %s%n", course.getId(), course.getName(), course.getInstructor());
+                        }
+
+                        System.out.print("select course #: ");
+                        int courseId = input.nextInt();
+                        if (courseId > 0 && courseId <= courseList.size()) {
+                            studentService.registerStudentToCourse(email, courseId);
+                            System.out.printf("successfully register %s to %s%n", studentService.getStudentByEmail(email).getName(), courseService.getCourseById(courseId).getName());
+                            printStudentCourses(email);
+                        } else {
+                            System.out.printf("course id not found!%n");
+                        }
+
+                        System.out.printf("session ended!%n");
+                    }
+                }
+            }
+        } while(userInput != 2);
+
+        input.close();
+    }
+
+    private static void printStudentCourses(String email) {
+        System.out.printf("%s courses:%n-----------------------------%n", email);
+        System.out.printf("%-2s | %-20s | %s%n", "ID", "Course", "Instructor");
+        List<Course> userCourses = studentService.getStudentCourses(email);
+        if (userCourses.isEmpty()) {
+            System.out.printf("No courses to view%n");
+        }
+
+        Iterator var2 = userCourses.iterator();
+
+        while(var2.hasNext()) {
+            Course course = (Course)var2.next();
+            System.out.printf("%-2d | %-20s | %s%n", course.getId(), course.getName(), course.getInstructor());
+        }
+
+    }
+}
