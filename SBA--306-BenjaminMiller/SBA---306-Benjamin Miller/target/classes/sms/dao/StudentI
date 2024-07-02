@@ -1,0 +1,24 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package sba.sms.dao;
+
+import java.util.List;
+import sba.sms.models.Course;
+import sba.sms.models.Student;
+
+public interface StudentI {
+    List<Student> getAllStudents();
+
+    void createStudent(Student var1);
+
+    Student getStudentByEmail(String var1);
+
+    boolean validateStudent(String var1, String var2);
+
+    void registerStudentToCourse(String var1, int var2);
+
+    List<Course> getStudentCourses(String var1);
+}
