@@ -1,0 +1,130 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package sba.sms.models;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
+@Entity
+@Table(
+    name = "student"
+)
+public class Student {
+    @Id
+    @Column(
+        name = "email",
+        length = 50
+    )
+    private String email;
+    @Column(
+        name = "name",
+        length = 50,
+        nullable = false
+    )
+    private String name;
+    @Column(
+        name = "password",
+        length = 50,
+        nullable = false
+    )
+    private String password;
+    @ManyToMany(
+        fetch = FetchType.EAGER,
+        cascade = {CascadeType.DETACH, CascadeType.REMOVE, CascadeType.MERGE, CascadeType.PERSIST}
+    )
+    @JoinTable(
+        name = "student_courses",
+        joinColumns = {@JoinColumn(
+    name = "student_email"
+)},
+        inverseJoinColumns = {@JoinColumn(
+    name = "courses_id"
+)}
+    )
+    private Set<Course> courses = new HashSet();
+
+    public Student() {
+    }
+
+    public Student(String email, String name, String password, Set<Course> courses) {
+        this.email = email;
+        this.name = name;
+        this.password = password;
+        this.courses = courses;
+    }
+
+    public Student(String email, String name, String password) {
+        this.email = email;
+        this.name = name;
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Set<Course> getCourses() {
+        return this.courses;
+    }
+
+    public void setCourses(Set<Course> courses) {
+        this.courses = courses;
+    }
+
+    public String toString() {
+        return "Student{email='" + this.email + "', name='" + this.name + "', password='" + this.password + "'}";
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        } else if (o != null && this.getClass() == o.getClass()) {
+            Student student = (Student)o;
+            return Objects.equals(this.email, student.email);
+        } else {
+            return false;
+        }
+    }
+
+    public int hashCode() {
+        return Objects.hash(new Object[]{this.email});
+    }
+
+    public void addCourse(Course course) {
+        this.courses.add(course);
+        course.getStudents().add(this);
+    }
+}
