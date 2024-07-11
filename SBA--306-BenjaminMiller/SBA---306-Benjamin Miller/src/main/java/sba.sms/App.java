@@ -25,7 +25,7 @@ import java.util.Scanner;
  * <b style="color:red">WARNING! </b>
  * <b>DO NOT MODIFY THIS CODE</b>
  *
- * @author  Jafer Alhaboubi & LaTonya Lewis
+ * @author  Benjamin Miller
  * @since sba-core-java-hibernate-junit 1.0
  */
 
